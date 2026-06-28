@@ -238,7 +238,7 @@
         </div>
 
         <!-- Central Reveal Content (Welcome Stage) -->
-        <div id="welcome-stage" class="hidden relative z-20 reveal-text flex flex-col items-center gap-xl max-w-2xl">
+        <div id="welcome-stage" class="relative z-20 reveal-text flex flex-col items-center gap-xl max-w-2xl">
             <!-- Hero Image / Visual Anchor -->
             <div class="relative group">
                 <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
@@ -308,7 +308,7 @@
             if (isUnlocked) {
                 if(countdownStage) countdownStage.style.display = 'none';
                 if(welcomeStage) {
-                    welcomeStage.classList.remove('hidden');
+                    welcomeStage.style.display = '';
                     welcomeStage.classList.add('flex');
                 }
                 if(bottomNav) {
@@ -317,7 +317,10 @@
                 }
                 if(headerLink) headerLink.style.pointerEvents = 'auto';
             } else {
-                if(welcomeStage) welcomeStage.style.display = 'none';
+                if(welcomeStage) {
+                    welcomeStage.style.display = 'none';
+                    welcomeStage.classList.remove('flex');
+                }
                 if(countdownStage) {
                     countdownStage.classList.remove('hidden');
                     countdownStage.classList.add('flex');
