@@ -121,16 +121,7 @@
             animation-delay: -4s;
         }
 
-        .progress-bar {
-            height: 4px;
-            background: linear-gradient(90deg, #864c6a, #9b3e60);
-            position: fixed;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-            transition: width 0.2s ease-out;
-        }
+
 
         .shining-node {
             box-shadow: 0 0 15px rgba(255, 182, 217, 0.6);
@@ -154,8 +145,10 @@
 </head>
 <body class="bg-background text-on-background font-body-base overflow-x-hidden min-h-screen flex justify-center items-start">
 <div class="app-container w-full min-h-screen max-w-md relative bg-background shadow-2xl flex flex-col justify-between overflow-hidden">
-    <!-- Scroll Progress Bar -->
-    <div class="progress-bar max-w-md w-full" id="scrollProgress" style="width: 0%"></div>
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 max-w-md w-full h-1 z-[60] bg-surface-container-low">
+        <div class="h-full bg-gradient-to-r from-primary to-secondary w-0 transition-all duration-100" id="scrollProgress"></div>
+    </div>
     
     <!-- Top App Bar -->
     <header class="fixed top-0 left-1/2 -translate-x-1/2 max-w-md w-full z-50 flex justify-between items-center px-gutter py-md bg-surface/80 backdrop-blur-md shadow-[0_4px_20px_rgba(255,182,217,0.2)]">
@@ -301,14 +294,14 @@
 </div>
 
 <script>
-        // Progress Bar Logic
-        window.onscroll = function() {
-            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrolled = (winScroll / height) * 100;
+        // Scroll Progress Handler
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
             const progress = document.getElementById("scrollProgress");
             if(progress) progress.style.width = scrolled + "%";
-        };
+        });
 
         // Micro-interactions for Bucket List items
         document.querySelectorAll('.group').forEach(item => {
