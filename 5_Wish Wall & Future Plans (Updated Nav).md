@@ -220,7 +220,7 @@
 </div>
 <div class="ml-6 flex-grow">
 <h4 class="font-body-bold text-lg text-on-surface">กินอาหารอร่อยๆที่ยังไม่เคยกิน</h4>
-<p class="text-on-surface-variant text-sm">หาร้านอร่อยๆ และเมนูพิเศษใหม่ๆ ที่เราสองคนยังไม่เคยลิ้มลอง</p>
+<p class="text-on-surface-variant text-sm">หาร้านอร่อยๆ และเมนูใหม่ๆ ที่เราสองคนยังไม่เคยกินไปด้วยกัน</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
@@ -231,7 +231,7 @@
 </div>
 <div class="ml-6 flex-grow">
 <h4 class="font-body-bold text-lg text-on-surface">ใช้เวลาทำสิ่งใหม่ๆด้วยกัน</h4>
-<p class="text-on-surface-variant text-sm">ลองทำกิจกรรมใหม่ๆ หรือสิ่งที่เรายังไม่มีโอกาสได้ลองทำด้วยกัน</p>
+<p class="text-on-surface-variant text-sm">ลองทำกิจกรรมใหม่ๆ หรือสิ่งที่เรายังไม่ได้ลองทำด้วยกัน</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
@@ -242,7 +242,7 @@
 </div>
 <div class="ml-6 flex-grow">
 <h4 class="font-body-bold text-lg text-on-surface">ถ่ายรูปเก็บความทรงจำ</h4>
-<p class="text-on-surface-variant text-sm">ถ่ายภาพบันทึกเรื่องราวและรอยยิ้มในทุกๆ ทริปและกิจกรรมที่เราได้ไปทำร่วมกัน</p>
+<p class="text-on-surface-variant text-sm">ถ่ายภาพบันทึกเรื่องราวและรอยยิ้มในทุกๆ ทริปและกิจกรรมที่เราได้ไปทำร่วมกันเยอะๆ</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
