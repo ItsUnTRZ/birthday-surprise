@@ -145,7 +145,7 @@ body {
 .app-container {
   width: 100%;
   min-width: 320px;
-  max-width: 480px;
+  max-width: 448px;
   min-height: 100vh;
   position: relative;
   background: radial-gradient(circle at 50% 0%, var(--color-surface-container-low) 0%, var(--color-background) 100%);
