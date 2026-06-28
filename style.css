@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600;700&display=swap');
 
 :root {
   /* Color Palette - Ethereal Bloom */
@@ -78,7 +78,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-on-background);
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Mali', sans-serif;
   min-height: 100vh;
   min-height: 100svh;
   overflow-x: hidden;
@@ -90,7 +90,7 @@ body {
 
 /* Typography Classes */
 .display-lg {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Itim', cursive;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -99,7 +99,7 @@ body {
 }
 
 .display-lg-mobile {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Itim', cursive;
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;
@@ -108,7 +108,7 @@ body {
 }
 
 .headline-md {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Itim', cursive;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
@@ -116,7 +116,7 @@ body {
 }
 
 .body-base {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Mali', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -124,7 +124,7 @@ body {
 }
 
 .body-bold {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Mali', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -132,7 +132,7 @@ body {
 }
 
 .label-caps {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Mali', sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -174,7 +174,7 @@ body {
   background: linear-gradient(135deg, var(--color-primary-container) 0%, var(--color-secondary-container) 100%);
   color: var(--color-on-primary-container);
   border: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Itim', cursive;
   font-weight: 700;
   font-size: 16px;
   padding: 14px 32px;
@@ -204,7 +204,7 @@ body {
   background: transparent;
   color: var(--color-primary);
   border: 1.5px solid var(--color-primary-container);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Itim', cursive;
   font-weight: 600;
   font-size: 15px;
   padding: 12px 28px;
