@@ -481,6 +481,19 @@
         function closeMusicModal() {
             document.getElementById('music-modal').classList.add('hidden');
             document.getElementById('music-modal').classList.remove('flex');
+            
+            // Also stop the music when closing the modal
+            const audio = document.getElementById('romantic-audio');
+            if (audio && !audio.paused) {
+                audio.pause();
+                const icon = document.getElementById('play-icon');
+                if (icon) icon.innerText = 'play_arrow';
+                const bars = document.getElementById('music-bars').children;
+                for(let bar of bars) {
+                    bar.style.backgroundColor = 'rgba(134, 76, 106, 0.4)';
+                    bar.classList.remove('animate-pulse');
+                }
+            }
         }
 
         function togglePlay() {
