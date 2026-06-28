@@ -208,8 +208,8 @@
 <span class="material-symbols-outlined text-3xl">flight_takeoff</span>
 </div>
 <div class="ml-6 flex-grow">
-<h4 class="font-body-bold text-lg text-on-surface">ทริปเที่ยวทะเลด้วยกัน</h4>
-<p class="text-on-surface-variant text-sm">ไปนั่งดูพระอาทิตย์ตกดินด้วยกันที่ริมหาดสักที่</p>
+<h4 class="font-body-bold text-lg text-on-surface">ทริปไปเที่ยวที่ที่ยังไม่เคยไป</h4>
+<p class="text-on-surface-variant text-sm">ออกเดินทางไปเช็คอินดินแดนใหม่ๆ เปิดโลกกว้างและสะสมหมุดแผนที่ความรักของเราสองคน 🗺️✨</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
@@ -219,30 +219,30 @@
 <span class="material-symbols-outlined text-3xl">restaurant</span>
 </div>
 <div class="ml-6 flex-grow">
-<h4 class="font-body-bold text-lg text-on-surface">Dinner มื้อพิเศษ</h4>
-<p class="text-on-surface-variant text-sm">หาร้านอร่อยๆ ที่เราสองคนอยากลองไปกินด้วยกัน</p>
+<h4 class="font-body-bold text-lg text-on-surface">กินอาหารอร่อยๆที่ยังไม่เคยกิน</h4>
+<p class="text-on-surface-variant text-sm">พากันไปตามล่าหาเมนูเด็ดและร้านอร่อยๆ ค้นพบรสชาติแห่งความสุขที่จะเป็นมื้อโปรดของเรามื้อต่อไป 🍕🍰</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
 <!-- Item 3 -->
 <div class="flex items-center p-6 bg-surface-container-low rounded-2xl transition-transform hover:scale-[1.02] duration-300 group">
 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-2xl shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">movie</span>
+<span class="material-symbols-outlined text-3xl">celebration</span>
 </div>
 <div class="ml-6 flex-grow">
-<h4 class="font-body-bold text-lg text-on-surface">ดูหนังมาราธอนที่บ้าน</h4>
-<p class="text-on-surface-variant text-sm">สั่งป๊อปคอร์นมานั่งดูหนังเรื่องโปรดทั้งวันทั้งคืน</p>
+<h4 class="font-body-bold text-lg text-on-surface">ใช้เวลาทำสิ่งใหม่ๆด้วยกัน</h4>
+<p class="text-on-surface-variant text-sm">ชวนกันลองทำกิจกรรมแปลกใหม่ที่ไม่เคยทำมาก่อน สนุกสนานและเรียนรู้มุมน่ารักๆ ของกันและกันในทุกๆ วัน 🎨🛹</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
 <!-- Item 4 -->
 <div class="flex items-center p-6 bg-surface-container-low rounded-2xl transition-transform hover:scale-[1.02] duration-300 group">
 <div class="w-16 h-16 flex items-center justify-center bg-white rounded-2xl shadow-sm text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">camera_outdoor</span>
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
 </div>
 <div class="ml-6 flex-grow">
 <h4 class="font-body-bold text-lg text-on-surface">ถ่ายรูปเก็บความทรงจำ</h4>
-<p class="text-on-surface-variant text-sm">สร้างอัลบั้มภาพใหม่สำหรับปีที่แสนพิเศษนี้</p>
+<p class="text-on-surface-variant text-sm">ลั่นชัตเตอร์บันทึกทุกรอยยิ้มแสนหวานและโมเมนต์พิเศษ เพื่อคอยเตือนใจว่าทุกวินาทีที่มีเธอคือสิ่งล้ำค่า 📸💖</p>
 </div>
 <div class="shining-node w-3 h-3 bg-secondary rounded-full"></div>
 </div>
