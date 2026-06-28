@@ -370,7 +370,7 @@
             const now = Date.now();
             bypassHistory.push(now);
             bypassHistory = bypassHistory.filter(t => now - t <= 1000);
-            if (bypassHistory.length >= 5) {
+            if (bypassHistory.length >= 7) {
                 bypassHistory = [];
                 localStorage.setItem('birthday_unlocked', 'true');
                 alert('🔓 ปลดล็อคระบบสำหรับทดสอบเรียบร้อยแล้ว!');
@@ -383,7 +383,7 @@
             const now = Date.now();
             lockHistory.push(now);
             lockHistory = lockHistory.filter(t => now - t <= 1000);
-            if (lockHistory.length >= 5) {
+            if (lockHistory.length >= 7) {
                 lockHistory = [];
                 localStorage.removeItem('birthday_unlocked');
                 alert('🔒 ล็อคระบบกลับสู่โหมดนับถอยหลังเรียบร้อยแล้ว!');
