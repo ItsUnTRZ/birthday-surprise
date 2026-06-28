@@ -365,32 +365,26 @@
             if(sElem) sElem.innerText = String(seconds).padStart(2, '0');
         }
         
-        let clickCount = 0;
-        let lastClickTime = 0;
+        let bypassHistory = [];
         window.handleSecretBypass = function() {
             const now = Date.now();
-            if (now - lastClickTime > 3000) {
-                clickCount = 0;
-            }
-            clickCount++;
-            lastClickTime = now;
-            if (clickCount >= 5) {
+            bypassHistory.push(now);
+            bypassHistory = bypassHistory.filter(t => now - t <= 1000);
+            if (bypassHistory.length >= 5) {
+                bypassHistory = [];
                 localStorage.setItem('birthday_unlocked', 'true');
                 alert('🔓 ปลดล็อคระบบสำหรับทดสอบเรียบร้อยแล้ว!');
                 checkUnlock();
             }
         };
         
-        let lockClickCount = 0;
-        let lastLockClickTime = 0;
+        let lockHistory = [];
         window.handleSecretLock = function() {
             const now = Date.now();
-            if (now - lastLockClickTime > 3000) {
-                lockClickCount = 0;
-            }
-            lockClickCount++;
-            lastLockClickTime = now;
-            if (lockClickCount >= 5) {
+            lockHistory.push(now);
+            lockHistory = lockHistory.filter(t => now - t <= 1000);
+            if (lockHistory.length >= 5) {
+                lockHistory = [];
                 localStorage.removeItem('birthday_unlocked');
                 alert('🔒 ล็อคระบบกลับสู่โหมดนับถอยหลังเรียบร้อยแล้ว!');
                 checkUnlock();
