@@ -203,8 +203,8 @@
                     </p>
 <!-- Embedded Photo Memory -->
 <div class="reveal my-xl group relative active">
-<div class="aspect-video w-full rounded-xl overflow-hidden shadow-lg transform group-hover:scale-[1.02] transition-transform duration-500 border-4 border-white">
-<img class="w-full h-full object-cover" data-alt="A cinematic, soft-focus candid photograph of a happy couple laughing together in a sun-drenched field of wildflowers during the golden hour. The lighting is warm and ethereal, with soft lens flares and a romantic, dreamy atmosphere. The color palette is dominated by soft pinks, warm ambers, and gentle greens, matching a luxury celebratory aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAORZzIc6o428BH6TA_noVqQzcwOvzsckgvjudqNY6tsgTo-BJaQYR4VLAg6m2GvFaTSI08efDJryLLCCSBdJhkp3ZX_bJwWge6M0krILeBE-9YE9dN6FbGkgW1be5ByxsE4OfP6ePBulHVmUnUo-DPubSGCIHfKPxRtvU8UfTqM-nNVRJYjiMLk6NeOu1LBHENE8JkOjiyQLKimw22bprM0v44teBtHsuMhfLyYUdfEm8J-_Ijhe5_7NyMWH5NkUbKfQ2gOO4GF6I">
+<div class="aspect-[3/4] max-w-sm mx-auto w-full rounded-xl overflow-hidden shadow-lg transform group-hover:scale-[1.02] transition-transform duration-500 border-4 border-white">
+<img class="w-full h-full object-cover object-center" data-alt="ภาพคู่หวานๆ ของเราที่ร้านชาไข่มุก" src="letter_couple.jpg">
 </div>
 <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary shadow-md transform rotate-12">
 <span class="material-symbols-outlined text-3xl">favorite</span>
