@@ -306,7 +306,10 @@
             const headerLink = document.getElementById('header-link');
             
             if (isUnlocked) {
-                if(countdownStage) countdownStage.style.display = 'none';
+                if(countdownStage) {
+                    countdownStage.style.display = 'none';
+                    countdownStage.classList.remove('flex');
+                }
                 if(welcomeStage) {
                     welcomeStage.style.display = '';
                     welcomeStage.classList.add('flex');
@@ -322,6 +325,7 @@
                     welcomeStage.classList.remove('flex');
                 }
                 if(countdownStage) {
+                    countdownStage.style.display = '';
                     countdownStage.classList.remove('hidden');
                     countdownStage.classList.add('flex');
                 }
