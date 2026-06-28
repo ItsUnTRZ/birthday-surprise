@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Itim&amp;family=Mali:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <!-- Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.45/dist/lenis.min.js"></script>
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -330,5 +331,20 @@
             const progress = document.getElementById("scrollProgress");
             if(progress) progress.style.width = scrolled + "%";
         });
+
+        // Initialize Lenis for premium smooth scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            smoothTouch: false
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
     </script>
 </body></html>
