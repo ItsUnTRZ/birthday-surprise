@@ -203,14 +203,28 @@
 <div class="absolute inset-0 bg-white/20 z-20 pointer-events-none rounded-xl"></div>
 </a>
 <!-- Call to Action (Initial state hidden or subtle) -->
-<div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center space-y-6" id="success-message">
-<div class="bg-surface-container-low/90 backdrop-blur-lg p-8 rounded-3xl shadow-[0_8px_30px_rgba(255,182,217,0.3)] border-2 border-primary-fixed max-w-sm">
-<h3 class="font-headline-md text-headline-md text-primary mb-2">เซอร์ไพรส์! 🎈</h3>
-<p class="font-body-base text-on-surface-variant">การเดินทางแห่งความทรงจำและความมหัศจรรย์ของคุณเริ่มต้นขึ้นแล้ว คุณพร้อมหรือยัง?</p>
-</div>
-<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-10 py-4 rounded-full font-body-bold text-body-bold shadow-lg hover:scale-110 transition-all pulse-glow">
-                    เริ่มต้นเรื่องราว
-                </button>
+<div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center flex flex-col items-center gap-6" id="success-message">
+    <!-- Hero Image / Visual Anchor -->
+    <div class="relative group">
+        <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
+        <div class="relative glass-card p-4 rounded-[40px] shadow-2xl transition-transform duration-500 hover:rotate-3">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-[32px] overflow-hidden">
+                <img alt="ภาพคู่ของเราใต้แสงเหนือสุดพิเศษ" class="w-full h-full object-cover object-center" src="aurora_couple.jpg">
+            </div>
+            <!-- Small floating badge -->
+            <div class="absolute -bottom-4 -right-4 bg-primary text-on-primary p-4 rounded-full shadow-lg flex items-center justify-center animate-bounce">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-surface-container-low/90 backdrop-blur-lg p-8 rounded-3xl shadow-[0_8px_30px_rgba(255,182,217,0.3)] border-2 border-primary-fixed max-w-sm">
+        <h3 class="font-headline-md text-headline-md text-primary mb-2">เซอร์ไพรส์! 🎈</h3>
+        <p class="font-body-base text-on-surface-variant">การเดินทางแห่งความทรงจำและความมหัศจรรย์ของคุณเริ่มต้นขึ้นแล้ว คุณพร้อมหรือยัง?</p>
+    </div>
+    <button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-10 py-4 rounded-full font-body-bold text-body-bold shadow-lg hover:scale-110 transition-all pulse-glow">
+        เริ่มต้นเรื่องราว
+    </button>
 </div>
 </div>
 </main>
