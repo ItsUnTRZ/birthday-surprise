@@ -173,7 +173,7 @@
     </div>
 
     <!-- Main Canvas -->
-    <main class="relative min-h-screen flex flex-col items-center justify-center flex-grow px-gutter z-10 pb-20">
+    <main class="relative min-h-screen flex flex-col items-center justify-center flex-grow px-gutter z-10 pt-16 pb-20 sm:pt-20">
         <!-- Center Stage: The Gift -->
         <div id="gift-stage" class="flex flex-col items-center gap-12 transition-all duration-700 w-full max-w-sm mx-auto">
             <!-- Opening Message -->
@@ -208,12 +208,12 @@
         </div>
 
         <!-- Call to Action -->
-        <div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center flex flex-col items-center gap-6 w-full max-w-md mx-auto" id="success-message">
+        <div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center flex flex-col items-center gap-4 sm:gap-6 w-full max-w-md mx-auto" id="success-message">
             <!-- Hero Image / Visual Anchor -->
             <div class="relative group">
                 <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
-                <div class="relative glass-card p-4 rounded-[40px] shadow-2xl transition-transform duration-500 hover:rotate-3">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-[32px] overflow-hidden">
+                <div class="relative glass-card p-4 rounded-[32px] sm:rounded-[40px] shadow-2xl transition-transform duration-500 hover:rotate-3">
+                    <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 max-w-[45vw] max-h-[30vh] aspect-square rounded-2xl sm:rounded-[32px] overflow-hidden">
                         <img alt="ภาพคู่ของเราใต้แสงเหนือสุดพิเศษ" class="w-full h-full object-cover object-center" src="aurora_couple.jpg">
                     </div>
                     <!-- Small floating badge -->
@@ -369,5 +369,56 @@
         }
 
         requestAnimationFrame(raf);
+
+        // Responsive Scroll Indicator
+        function initScrollIndicator() {
+            let indicator = document.getElementById('scroll-down-indicator');
+            if (!indicator) {
+                indicator = document.createElement('div');
+                indicator.id = 'scroll-down-indicator';
+                indicator.className = 'fixed bottom-24 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1 text-primary pointer-events-none transition-opacity duration-300';
+                indicator.style.opacity = '0';
+                indicator.style.display = 'none';
+                indicator.innerHTML = `
+                    <span class="text-[10px] font-body-bold tracking-wider bg-white/95 text-primary px-3 py-1 rounded-full shadow-md border border-primary-container">เลื่อนลงน้าา 💖</span>
+                    <span class="material-symbols-outlined text-xl drop-shadow-sm animate-bounce">keyboard_double_arrow_down</span>
+                `;
+                document.body.appendChild(indicator);
+            }
+
+            function updateScrollIndicator() {
+                const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalScroll <= 20) {
+                    indicator.style.opacity = '0';
+                    setTimeout(() => {
+                        if (document.documentElement.scrollHeight - window.innerHeight <= 20) {
+                            indicator.style.display = 'none';
+                        }
+                    }, 300);
+                } else {
+                    indicator.style.display = 'flex';
+                    indicator.offsetHeight; // Force reflow
+                    if (window.scrollY >= totalScroll - 40) {
+                        indicator.style.opacity = '0';
+                    } else {
+                        indicator.style.opacity = '1';
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', updateScrollIndicator);
+            window.addEventListener('resize', updateScrollIndicator);
+            
+            updateScrollIndicator();
+            setTimeout(updateScrollIndicator, 300);
+            setTimeout(updateScrollIndicator, 1000);
+            
+            document.querySelectorAll('img').forEach(img => {
+                if (img.complete) return;
+                img.addEventListener('load', updateScrollIndicator);
+            });
+        }
+
+        initScrollIndicator();
     </script>
 </body></html>

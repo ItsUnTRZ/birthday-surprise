@@ -165,7 +165,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="px-gutter pt-28 pb-32 space-y-12 flex-grow">
+    <main class="px-gutter pt-20 pb-24 sm:pt-28 sm:pb-32 space-y-10 sm:space-y-12 flex-grow">
         <!-- Hero: Wish Wall -->
         <section class="text-center relative">
             <div class="mb-8">
@@ -364,5 +364,56 @@
         }
 
         requestAnimationFrame(raf);
+
+        // Responsive Scroll Indicator
+        function initScrollIndicator() {
+            let indicator = document.getElementById('scroll-down-indicator');
+            if (!indicator) {
+                indicator = document.createElement('div');
+                indicator.id = 'scroll-down-indicator';
+                indicator.className = 'fixed bottom-24 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1 text-primary pointer-events-none transition-opacity duration-300';
+                indicator.style.opacity = '0';
+                indicator.style.display = 'none';
+                indicator.innerHTML = `
+                    <span class="text-[10px] font-body-bold tracking-wider bg-white/95 text-primary px-3 py-1 rounded-full shadow-md border border-primary-container">เลื่อนลงน้าา 💖</span>
+                    <span class="material-symbols-outlined text-xl drop-shadow-sm animate-bounce">keyboard_double_arrow_down</span>
+                `;
+                document.body.appendChild(indicator);
+            }
+
+            function updateScrollIndicator() {
+                const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+                if (totalScroll <= 20) {
+                    indicator.style.opacity = '0';
+                    setTimeout(() => {
+                        if (document.documentElement.scrollHeight - window.innerHeight <= 20) {
+                            indicator.style.display = 'none';
+                        }
+                    }, 300);
+                } else {
+                    indicator.style.display = 'flex';
+                    indicator.offsetHeight; // Force reflow
+                    if (window.scrollY >= totalScroll - 40) {
+                        indicator.style.opacity = '0';
+                    } else {
+                        indicator.style.opacity = '1';
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', updateScrollIndicator);
+            window.addEventListener('resize', updateScrollIndicator);
+            
+            updateScrollIndicator();
+            setTimeout(updateScrollIndicator, 300);
+            setTimeout(updateScrollIndicator, 1000);
+            
+            document.querySelectorAll('img').forEach(img => {
+                if (img.complete) return;
+                img.addEventListener('load', updateScrollIndicator);
+            });
+        }
+
+        initScrollIndicator();
     </script>
 </body></html>
