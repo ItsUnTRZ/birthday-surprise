@@ -201,9 +201,9 @@
             </div>
             
             <div class="space-y-3">
-                <h2 class="font-display-lg-mobile text-3xl text-primary leading-tight">ของขวัญกำลังเดินทาง... 🎁</h2>
+                <h2 class="font-display-lg-mobile text-3xl text-primary leading-tight">ของขวัญวันเกิดสุดพิเศษ... 🎁</h2>
                 <p class="font-body-base text-on-surface-variant text-sm max-w-sm mx-auto leading-relaxed">
-                    เค้ากำลังเตรียมความมหัศจรรย์ไว้ให้ที่รักอยู่นะครับ อดใจรออีกนิดน้า แล้วเจอกันเมื่อถึงเวลาครับ! ✨
+                    วันเกิดที่รักคือวันที่ 9 กรกฎาคม แต่เค้ามีเซอร์ไพรส์พิเศษเปิดให้เริ่มเข้าเล่นกิจกรรมและเปิดของขวัญได้ก่อนตั้งแต่วันที่ 4 กรกฎาคมนี้นะครับ! ✨
                 </p>
             </div>
             
@@ -233,7 +233,7 @@
             
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container/20 rounded-full text-primary text-xs font-body-bold">
                 <span class="material-symbols-outlined text-sm">schedule</span>
-                <span>เปิดให้เข้าชมวันที่ 4 กรกฎาคม 2026</span>
+                <span>วันเกิด: 9 กรกฎาคม | เปิดให้เข้าชม: 4 กรกฎาคม 2026</span>
             </div>
         </div>
 
@@ -293,11 +293,12 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // Countdown and Unlock Logic
-        const targetDate = new Date('2026-07-04T00:00:00');
+        const unlockDate = new Date('2026-07-04T00:00:00'); // Open for entry
+        const birthdayDate = new Date('2026-07-09T00:00:00'); // Birthday (Countdown target)
         
         function checkUnlock() {
             const now = new Date();
-            const isUnlocked = now >= targetDate || localStorage.getItem('birthday_unlocked') === 'true';
+            const isUnlocked = now >= unlockDate || localStorage.getItem('birthday_unlocked') === 'true';
             
             const countdownStage = document.getElementById('countdown-stage');
             const welcomeStage = document.getElementById('welcome-stage');
@@ -334,7 +335,7 @@
         
         function updateCountdown() {
             const now = new Date();
-            const diff = targetDate - now;
+            const diff = birthdayDate - now;
             
             if (diff <= 0) {
                 checkUnlock();
