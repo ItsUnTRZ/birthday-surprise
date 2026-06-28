@@ -156,16 +156,18 @@
     <!-- Scroll Progress Bar -->
     <div class="progress-bar max-w-md w-full" id="scrollProgress" style="width: 0%"></div>
     
-    <!-- Top AppBar -->
-    <nav class="fixed top-0 max-w-md w-full z-50 flex justify-between items-center px-gutter py-md bg-surface/80 backdrop-blur-md shadow-[0_4px_20px_rgba(255,182,217,0.2)]">
-        <div class="flex items-center justify-center w-full relative">
-            <a href="1_Surprise%20Reveal%20(Thai).html" class="absolute left-0 flex items-center">
-                <span class="material-symbols-outlined text-primary transition-all duration-500 ease-in-out hover:scale-110">card_giftcard</span>
+    <!-- Top App Bar -->
+    <header class="fixed top-0 max-w-md w-full z-50 flex justify-between items-center px-gutter py-md bg-surface/80 backdrop-blur-md shadow-[0_4px_20px_rgba(255,182,217,0.2)]">
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <a class="flex items-center" href="1_Surprise%20Reveal%20(Thai).html">
+                <span class="material-symbols-outlined text-primary">card_giftcard</span>
             </a>
-            <h1 class="font-headline-md text-headline-md-mobile text-primary tracking-tight">Wish Wall</h1>
-            <span class="material-symbols-outlined absolute right-0 text-primary transition-all duration-500 ease-in-out hover:scale-110">celebration</span>
         </div>
-    </nav>
+        <h1 class="absolute left-1/2 -translate-x-1/2 font-headline-md text-headline-md-mobile text-primary tracking-tight">Wish Wall</h1>
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <span class="material-symbols-outlined text-primary">celebration</span>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main class="px-gutter pt-28 space-y-12 flex-grow">
