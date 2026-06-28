@@ -1,0 +1,287 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="th" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>เซอร์ไพรส์วันเกิด | การเดินทางที่แสนพิเศษ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffd9e2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#f9e2ec",
+                        "primary-fixed-dim": "#fab1d4",
+                        "surface-container": "#ffe8f2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#584321",
+                        "surface-bright": "#fff8f9",
+                        "primary-container": "#ffb6d9",
+                        "inverse-surface": "#3a2c34",
+                        "inverse-on-surface": "#ffecf4",
+                        "secondary": "#9b3e60",
+                        "tertiary-fixed": "#fedeb0",
+                        "surface": "#fff8f9",
+                        "on-primary-container": "#7c4361",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb1c7",
+                        "inverse-primary": "#fab1d4",
+                        "on-background": "#24181f",
+                        "on-secondary-fixed-variant": "#7d2648",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#864c6a",
+                        "tertiary": "#725b37",
+                        "on-surface-variant": "#504349",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffd8e8",
+                        "surface-dim": "#ebd4de",
+                        "on-surface": "#24181f",
+                        "surface-variant": "#f3dce7",
+                        "outline": "#827379",
+                        "surface-container-highest": "#f3dce7",
+                        "tertiary-fixed-dim": "#e1c296",
+                        "outline-variant": "#d4c2c8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#e6c79b",
+                        "primary": "#864c6a",
+                        "on-tertiary-fixed": "#281800",
+                        "on-secondary-fixed": "#3e001c",
+                        "surface-container-low": "#fff0f5",
+                        "background": "#fff8f9",
+                        "on-primary-fixed-variant": "#6b3552",
+                        "on-tertiary-container": "#69522f",
+                        "on-secondary-container": "#792345",
+                        "secondary-container": "#fe8eb2",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#370925"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "48px",
+                        "section-gap-desktop": "80px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-bold": ["Plus Jakarta Sans"],
+                        "body-base": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-bold": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffd8e8;
+            top: -20px;
+            opacity: 0;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .floating-balloon {
+            position: absolute;
+            animation: float 15s ease-in-out infinite;
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(-40px) translateX(-10px); }
+            75% { transform: translateY(-20px) translateX(15px); }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid #FCEEF4;
+        }
+
+        .reveal-text {
+            animation: textEntrance 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+        @keyframes textEntrance {
+            0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .pulse-button {
+            animation: pulse-glow 3s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(134, 76, 106, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(134, 76, 106, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(134, 76, 106, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-base overflow-x-hidden flex justify-center items-start">
+<div class="app-container w-full min-h-screen max-w-md relative bg-background shadow-2xl flex flex-col justify-between">
+    <!-- Top App Bar -->
+    <header class="fixed top-0 max-w-md w-full z-50 flex justify-between items-center px-gutter py-md bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md shadow-[0_4px_20px_rgba(255,182,217,0.2)]">
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <a class="flex items-center" href="1_Surprise%20Reveal%20(Thai).html">
+                <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">card_giftcard</span>
+            </a>
+        </div>
+        <h1 class="absolute left-1/2 -translate-x-1/2 font-headline-md text-headline-md-mobile md:text-headline-md text-primary dark:text-primary-fixed-dim">สำหรับคุณ</h1>
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">celebration</span>
+        </div>
+    </header>
+
+    <!-- Animated Background Layer -->
+    <div class="absolute inset-0 pointer-events-none z-10 overflow-hidden" id="confetti-container"></div>
+
+    <!-- Main Canvas -->
+    <main class="relative pt-24 pb-32 flex flex-col items-center justify-center flex-grow px-gutter text-center">
+        <!-- Floating Decoratives -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden select-none">
+            <div class="floating-balloon top-[15%] left-[10%] w-32 h-40 bg-primary-container rounded-full blur-xl opacity-30"></div>
+            <div class="floating-balloon top-[40%] right-[5%] w-48 h-60 bg-secondary-container rounded-full blur-2xl opacity-20" style="animation-delay: -2s;"></div>
+            <div class="floating-balloon bottom-[20%] left-[15%] w-24 h-32 bg-tertiary-container rounded-full blur-lg opacity-25" style="animation-delay: -5s;"></div>
+        </div>
+        <!-- Central Reveal Content -->
+        <div class="relative z-20 reveal-text flex flex-col items-center gap-xl max-w-2xl">
+            <!-- Hero Image / Visual Anchor -->
+            <div class="relative group">
+                <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
+                <div class="relative glass-card p-4 rounded-[40px] shadow-2xl transition-transform duration-500 hover:rotate-3">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-[32px] overflow-hidden">
+                        <img alt="ฉากการเฉลิมฉลองวันเกิดที่สดใส มีลูกโป่งสีชมพูรูปหัวใจและเศษกระดาษสีทองระยิบระยับในแสงแดดอ่อนๆ บรรยากาศรื่นเริงและโรแมนติก สไตล์มินิมอล" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeXAu1BA6d0AVge5L4qHlrvCv7NeRCj9i297OaWWRiw-oni4i6Nnu90ssVFbKUEILAT4QDyXN8Lg01lWAJMMdnDyQ3Q5v4t5UF3b5EXWteDRTjqVzgAstQhEEZzQG2F7k-W22Sc2vP9GKhg0kSCIUiGLhy1zWuPj56vZ-ps1hH3mPNYlXSIOhP7dW9Jsr5XUqR4wYJ81EaEZTGbFUVovXfeaeIixv4b_7gsznMOrMyymZiKXvN5cQle5RSB9IVPTIky-VED1RZXHg">
+                    </div>
+                    <!-- Small floating badge -->
+                    <div class="absolute -bottom-4 -right-4 bg-primary text-on-primary p-4 rounded-full shadow-lg flex items-center justify-center animate-bounce">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Message Group -->
+            <div class="space-y-md">
+                <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
+                    สุขสันต์วันเกิด!
+                </h2>
+                <p class="font-body-base text-on-surface-variant max-w-md mx-auto text-lg leading-relaxed">
+                    วันนี้เป็นวันสำหรับการเฉลิมฉลองเพื่อคุณ เราได้เตรียมสิ่งพิเศษเพื่อแสดงให้เห็นว่าคุณมีความหมายต่อเรามากแค่ไหน
+                </p>
+            </div>
+            <div class="mt-8">
+                <button class="pulse-button group flex items-center gap-md px-xl py-lg bg-gradient-to-r from-primary to-secondary text-on-primary font-body-bold rounded-full transition-all duration-300 hover:scale-110 active:scale-95 shadow-[0_10px_30px_rgba(134,76,106,0.3)]" onclick="window.location.href='2_Gift%20Box%20Surprise%20(Thai).html'">
+                    <span class="text-xl">เปิดกล่องของขวัญ 🎁</span>
+                    <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+        <!-- Atmospheric Shader (Low Opacity Backdrop) -->
+        <div class="fixed inset-0 -z-10 opacity-30"></div>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 max-w-md w-full z-50 flex justify-around items-center px-4 pb-safe-bottom h-20 bg-surface-container-low/90 dark:bg-surface-container-highest/90 backdrop-blur-lg shadow-[0_-4px_20px_rgba(255,182,217,0.15)] rounded-t-xl">
+        <a class="flex flex-col items-center justify-center bg-primary-container dark:bg-on-primary-fixed-variant text-on-primary-container dark:text-primary-fixed rounded-full p-3 scale-110 shadow-md transition-all duration-500 ease-in-out" href="1_Surprise%20Reveal%20(Thai).html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim p-3 hover:text-primary transition-colors" href="3_Birthday%20Letter%20(Thai).html">
+            <span class="material-symbols-outlined">auto_stories</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim p-3 hover:text-primary transition-colors" href="4_Our%20Story%20Timeline%20(Thai).html">
+            <span class="material-symbols-outlined">photo_library</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim p-3 hover:text-primary transition-colors" href="5_Wish%20Wall%20&%20Future%20Plans%20(Updated%20Nav).html">
+            <span class="material-symbols-outlined">auto_awesome</span>
+        </a>
+    </nav>
+</div>
+
+<!-- Interactive Layer: Confetti Generation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('confetti-container');
+        const colors = ['#864c6a', '#9b3e60', '#ffb6d9', '#fedeb0', '#fab1d4'];
+        
+        function createConfetti() {
+            if (!container) return;
+            const piece = document.createElement('div');
+            piece.className = 'confetti-piece';
+            
+            const size = Math.random() * 8 + 4 + 'px';
+            piece.style.width = size;
+            piece.style.height = size;
+            piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            piece.style.left = Math.random() * 100 + 'vw';
+            piece.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+            
+            container.appendChild(piece);
+            
+            setTimeout(() => {
+                piece.remove();
+            }, 5000);
+        }
+
+        // Initial burst
+        for(let i = 0; i < 50; i++) {
+            setTimeout(createConfetti, i * 50);
+        }
+
+        // Continuous fall
+        setInterval(createConfetti, 200);
+
+        // Click interaction for more confetti
+        document.body.addEventListener('click', (e) => {
+            for(let i = 0; i < 5; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.left = e.clientX + (Math.random() * 40 - 20) + 'px';
+                piece.style.top = e.clientY + 'px';
+                piece.style.animationDuration = '2s';
+                container.appendChild(piece);
+                setTimeout(() => piece.remove(), 2000);
+            }
+        });
+    });
+</script>
+</body></html>

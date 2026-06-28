@@ -1,0 +1,347 @@
+<!DOCTYPE html><html class="light" lang="th" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>ของขวัญวันเกิดสุดพิเศษสำหรับคุณ</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffd9e2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#f9e2ec",
+                        "primary-fixed-dim": "#fab1d4",
+                        "surface-container": "#ffe8f2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#584321",
+                        "surface-bright": "#fff8f9",
+                        "primary-container": "#ffb6d9",
+                        "inverse-surface": "#3a2c34",
+                        "inverse-on-surface": "#ffecf4",
+                        "secondary": "#9b3e60",
+                        "tertiary-fixed": "#fedeb0",
+                        "surface": "#fff8f9",
+                        "on-primary-container": "#7c4361",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb1c7",
+                        "inverse-primary": "#fab1d4",
+                        "on-background": "#24181f",
+                        "on-secondary-fixed-variant": "#7d2648",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#864c6a",
+                        "tertiary": "#725b37",
+                        "on-surface-variant": "#504349",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffd8e8",
+                        "surface-dim": "#ebd4de",
+                        "on-surface": "#24181f",
+                        "surface-variant": "#f3dce7",
+                        "outline": "#827379",
+                        "surface-container-highest": "#f3dce7",
+                        "tertiary-fixed-dim": "#e1c296",
+                        "outline-variant": "#d4c2c8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#e6c79b",
+                        "primary": "#864c6a",
+                        "on-tertiary-fixed": "#281800",
+                        "on-secondary-fixed": "#3e001c",
+                        "surface-container-low": "#fff0f5",
+                        "background": "#fff8f9",
+                        "on-primary-fixed-variant": "#6b3552",
+                        "on-tertiary-container": "#69522f",
+                        "on-secondary-container": "#792345",
+                        "secondary-container": "#fe8eb2",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#370925"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "48px",
+                        "section-gap-desktop": "80px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "gutter": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "body-bold": ["Plus Jakarta Sans"],
+                        "body-base": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-bold": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background: linear-gradient(135deg, #fff8f9 0%, #ffe8f2 100%);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .gift-container {
+            perspective: 1000px;
+        }
+
+        .gift-box {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .gift-box:active {
+            transform: scale(0.95);
+        }
+
+        .floating-heart {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.4;
+            animation: float-up 6s infinite linear;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.4; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 182, 217, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(255, 182, 217, 0.6); transform: scale(1.05); }
+        }
+
+        .sparkle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle-anim 2s infinite;
+        }
+
+        @keyframes sparkle-anim {
+            0%, 100% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-body-base text-on-surface flex justify-center items-start" style="background: linear-gradient(135deg, rgb(255, 248, 249) 0%, rgb(255, 232, 242) 100%); min-height: 100vh; margin: 0px; padding: 0px;">
+<div class="app-container w-full min-h-screen max-w-md relative bg-background shadow-2xl flex flex-col justify-between overflow-hidden">
+    <!-- Top App Bar -->
+    <header class="fixed top-0 max-w-md w-full z-50 flex justify-between items-center px-gutter py-md bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md shadow-[0_4px_20px_rgba(255,182,217,0.2)]">
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <a class="flex items-center" href="1_Surprise%20Reveal%20(Thai).html">
+                <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">card_giftcard</span>
+            </a>
+        </div>
+        <h1 class="absolute left-1/2 -translate-x-1/2 font-headline-md text-headline-md-mobile md:text-headline-md text-primary dark:text-primary-fixed-dim">ของขวัญพิเศษ</h1>
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+            <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">celebration</span>
+        </div>
+    </header>
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0" id="particles-container">
+        <!-- Particles will be generated by script -->
+    </div>
+
+    <!-- Main Canvas -->
+    <main class="relative min-h-screen flex flex-col items-center justify-center flex-grow px-gutter z-10 pb-20">
+        <!-- Center Stage: The Gift -->
+        <div class="gift-container flex flex-col items-center gap-12 mt-16">
+            <!-- Opening Message -->
+            <div class="text-center space-y-4 animate-in fade-in slide-in-from-bottom duration-1000" id="title-message">
+                <p class="font-label-caps text-label-caps text-primary tracking-widest uppercase">สุขสันต์วันเกิด!</p>
+                <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">มีบางอย่างที่พิเศษรอคุณอยู่...</h2>
+            </div>
+            <!-- 3D Style Gift Box -->
+            <a class="gift-box w-64 h-64 relative pulse-glow group block" href="#" id="gift-box" onclick="event.preventDefault(); triggerSurprise();">
+                <!-- The Lid & Ribbon -->
+                <div class="absolute inset-0 bg-primary-container rounded-xl shadow-xl z-20 border-4 border-surface-container-high overflow-hidden">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-full bg-[#ffd700] shadow-inner"></div>
+                    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-full h-12 bg-[#ffd700] shadow-inner"></div>
+                    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#864c6a 2px, transparent 2px); background-size: 20px 20px;"></div>
+                </div>
+                <!-- Golden Bow/Ribbon Loops -->
+                <div class="absolute -top-12 left-1/2 -translate-x-1/2 z-30 flex gap-0">
+                    <div class="w-16 h-16 border-8 border-[#ffd700] rounded-[50%_50%_0%_50%] rotate-45 shadow-lg bg-[#ffe135]"></div>
+                    <div class="w-16 h-16 border-8 border-[#ffd700] rounded-[50%_50%_50%_0%] -rotate-45 shadow-lg bg-[#ffe135] -ml-4"></div>
+                </div>
+                <!-- Interaction Hint -->
+                <div class="absolute -bottom-16 left-1/2 -translate-x-1/2 w-max text-center">
+                    <span class="font-body-bold text-body-bold text-primary group-hover:scale-110 transition-transform block">แตะเพื่อเปิด</span>
+                    <div class="mt-2 flex justify-center gap-1">
+                        <div class="w-2 h-2 rounded-full bg-primary animate-bounce"></div>
+                        <div class="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:0.2s]"></div>
+                        <div class="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:0.4s]"></div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 bg-white/20 z-20 pointer-events-none rounded-xl"></div>
+            </a>
+            <!-- Call to Action -->
+            <div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center space-y-6" id="success-message">
+                <div class="bg-surface-container-low/90 backdrop-blur-lg p-8 rounded-3xl shadow-[0_8px_30px_rgba(255,182,217,0.3)] border-2 border-primary-fixed max-w-sm mx-auto">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">เซอร์ไพรส์! 🎈</h3>
+                    <p class="font-body-base text-on-surface-variant">การเดินทางแห่งความทรงจำและความมหัศจรรย์ของคุณเริ่มต้นขึ้นแล้ว คุณพร้อมหรือยัง?</p>
+                </div>
+                <button onclick="window.location.href='3_Birthday%20Letter%20(Thai).html'" class="bg-gradient-to-r from-primary to-secondary text-on-primary px-10 py-4 rounded-full font-body-bold text-body-bold shadow-lg hover:scale-110 transition-all pulse-glow">
+                    อ่านจดหมายของฉัน ✉️
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="fixed bottom-0 max-w-md w-full z-50 flex justify-around items-center px-4 pb-safe-bottom h-20 bg-surface-container-low/90 backdrop-blur-lg shadow-[0_-4px_20px_rgba(255,182,217,0.15)] rounded-t-xl" id="bottom-nav">
+        <a class="flex flex-col items-center justify-center text-secondary p-3 hover:text-primary transition-colors" href="1_Surprise%20Reveal%20(Thai).html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">card_giftcard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary p-3 hover:text-primary transition-colors" href="3_Birthday%20Letter%20(Thai).html">
+            <span class="material-symbols-outlined">auto_stories</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary p-3 hover:text-primary transition-colors" href="4_Our%20Story%20Timeline%20(Thai).html">
+            <span class="material-symbols-outlined">photo_library</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-secondary p-3 hover:text-primary transition-colors" href="5_Wish%20Wall%20&%20Future%20Plans%20(Updated%20Nav).html">
+            <span class="material-symbols-outlined">auto_awesome</span>
+        </a>
+    </nav>
+</div>
+
+<!-- Success Confetti/Particle Scene -->
+<div class="fixed inset-0 pointer-events-none z-40" id="confetti-overlay"></div>
+
+<script>
+        // Background heart generator
+        const particlesContainer = document.getElementById('particles-container');
+        const icons = ['favorite', 'auto_awesome', 'celebration', 'flutter_dash'];
+        
+        function createParticle() {
+            if(!particlesContainer) return;
+            const particle = document.createElement('span');
+            particle.className = 'material-symbols-outlined floating-heart text-primary-container';
+            particle.innerText = icons[Math.floor(Math.random() * icons.length)];
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            particle.style.animationDelay = (Math.random() * 5) + 's';
+            particlesContainer.appendChild(particle);
+            
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        for(let i = 0; i < 15; i++) {
+            createParticle();
+        }
+        setInterval(createParticle, 2000);
+
+        // Sparkle generator for the gift box
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            const size = Math.random() * 8 + 4;
+            sparkle.style.width = size + 'px';
+            sparkle.style.height = size + 'px';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.background = '#ffd700';
+            sparkle.style.boxShadow = '0 0 10px #ffd700';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+
+        // Trigger Surprise Animation
+        function triggerSurprise() {
+            const box = document.getElementById('gift-box');
+            const success = document.getElementById('success-message');
+            const titleMsg = document.getElementById('title-message');
+            
+            box.style.transform = 'scale(1.2) rotate(5deg)';
+            setTimeout(() => {
+                box.style.transform = 'scale(0) rotate(-20deg)';
+                box.style.opacity = '0';
+                if(titleMsg) {
+                    titleMsg.style.display = 'none';
+                }
+                
+                success.classList.remove('hidden');
+                setTimeout(() => {
+                    success.classList.add('opacity-100', 'translate-y-0');
+                }, 100);
+
+                createConfetti();
+            }, 600);
+        }
+
+        function createConfetti() {
+            const overlay = document.getElementById('confetti-overlay');
+            for(let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    const c = document.createElement('div');
+                    c.className = 'absolute w-3 h-3 rounded-sm';
+                    const colors = ['#864c6a', '#fab1d4', '#ffd700', '#9b3e60'];
+                    c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    c.style.left = '50%';
+                    c.style.top = '40%';
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = 8 + Math.random() * 15;
+                    const vx = Math.cos(angle) * velocity;
+                    const vy = Math.sin(angle) * velocity - 5;
+                    
+                    let posX = 0;
+                    let posY = 0;
+                    let gravity = 0.3;
+                    let currentVy = vy;
+                    
+                    const move = setInterval(() => {
+                        posX += vx;
+                        posY += currentVy;
+                        currentVy += gravity;
+                        c.style.transform = `translate(${posX}px, ${posY}px) rotate(${posX}deg)`;
+                        if(posY > window.innerHeight) {
+                            clearInterval(move);
+                            c.remove();
+                        }
+                    }, 16);
+                    overlay.appendChild(c);
+                }, i * 15);
+            }
+        }
+    </script>
+</body></html>
