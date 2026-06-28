@@ -173,7 +173,7 @@
             </a>
         </div>
         <h1 class="absolute left-1/2 -translate-x-1/2 font-headline-md text-2xl text-primary tracking-tight cursor-pointer" onclick="handleSecretBypass()">สำหรับที่รัก</h1>
-        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110">
+        <div class="flex items-center transition-all duration-500 ease-in-out hover:scale-110 cursor-pointer" onclick="handleSecretLock()">
             <span class="material-symbols-outlined text-primary">celebration</span>
         </div>
     </header>
@@ -373,6 +373,22 @@
             if (clickCount >= 5) {
                 localStorage.setItem('birthday_unlocked', 'true');
                 alert('🔓 ปลดล็อคระบบสำหรับทดสอบเรียบร้อยแล้ว!');
+                checkUnlock();
+            }
+        };
+        
+        let lockClickCount = 0;
+        let lastLockClickTime = 0;
+        window.handleSecretLock = function() {
+            const now = Date.now();
+            if (now - lastLockClickTime > 3000) {
+                lockClickCount = 0;
+            }
+            lockClickCount++;
+            lastLockClickTime = now;
+            if (lockClickCount >= 5) {
+                localStorage.removeItem('birthday_unlocked');
+                alert('🔒 ล็อคระบบกลับสู่โหมดนับถอยหลังเรียบร้อยแล้ว!');
                 checkUnlock();
             }
         };
