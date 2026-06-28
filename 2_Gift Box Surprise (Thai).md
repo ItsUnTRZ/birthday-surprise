@@ -168,7 +168,7 @@
 <!-- Main Canvas -->
 <main class="relative min-h-screen flex flex-col items-center justify-center px-gutter z-10 pb-0">
 <!-- Center Stage: The Gift -->
-<div class="gift-container flex flex-col items-center gap-20">
+<div id="gift-stage" class="flex flex-col items-center gap-12 transition-all duration-700 w-full max-w-sm mx-auto">
 <!-- Opening Message -->
 <div class="text-center space-y-4 animate-in fade-in slide-in-from-bottom duration-1000">
 <p class="font-label-caps text-label-caps text-primary tracking-widest uppercase">สุขสันต์วันเกิด!</p>
@@ -202,8 +202,10 @@
 <!-- Glassmorphism Reflection -->
 <div class="absolute inset-0 bg-white/20 z-20 pointer-events-none rounded-xl"></div>
 </a>
+</div>
+
 <!-- Call to Action (Initial state hidden or subtle) -->
-<div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center flex flex-col items-center gap-6" id="success-message">
+<div class="hidden opacity-0 transform translate-y-8 transition-all duration-700 text-center flex flex-col items-center gap-6 w-full max-w-md mx-auto" id="success-message">
     <!-- Hero Image / Visual Anchor -->
     <div class="relative group">
         <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-110 group-hover:scale-125 transition-transform duration-700"></div>
@@ -285,23 +287,35 @@
 
         // Trigger Surprise Animation
         function triggerSurprise() {
-            const box = document.getElementById('gift-box');
+            const giftStage = document.getElementById('gift-stage');
             const success = document.getElementById('success-message');
             const nav = document.getElementById('bottom-nav');
             
+            // Visual click feedback on box
+            const box = document.getElementById('gift-box');
             box.style.transform = 'scale(1.2) rotate(5deg)';
+            
             setTimeout(() => {
-                box.style.transform = 'scale(0) rotate(-20deg)';
-                box.style.opacity = '0';
+                // Fade and shrink out the entire stage
+                giftStage.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                giftStage.style.transform = 'scale(0.8) translateY(-20px)';
+                giftStage.style.opacity = '0';
                 
-                success.classList.remove('hidden');
                 setTimeout(() => {
-                    success.classList.add('opacity-100', 'translate-y-0');
-                    nav.classList.remove('translate-y-full');
-                }, 100);
+                    giftStage.style.display = 'none';
+                    
+                    success.classList.remove('hidden');
+                    success.classList.add('flex');
+                    // Force reflow
+                    success.offsetHeight;
+                    setTimeout(() => {
+                        success.classList.add('opacity-100', 'translate-y-0');
+                        nav.classList.remove('translate-y-full');
+                    }, 50);
 
-                createConfetti();
-            }, 600);
+                    createConfetti();
+                }, 600);
+            }, 300);
         }
 
         function createConfetti() {
